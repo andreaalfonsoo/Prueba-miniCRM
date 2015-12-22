@@ -110,6 +110,22 @@
                "VALUES('Andrea Alfonso', '23', 'Profesora','Informatica','Encargada de departamento','andreaalfonsoo@gmail.com','andreaalfonsoo',0)";
          tx.executeSql(sql);
 
+         //Paso 3 insert valores
+         sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
+               "VALUES('Manuel López', '28', 'Estudiante','Educación infantil','Encargado de departamento','manuellopez@gmail.com','manuellopez',0)";
+         tx.executeSql(sql);
+
+         sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
+               "VALUES('Mercedes Jiménez', '40', 'Directora','Administración','Encargada de la parte administrativa','mercedesjimenez@gmail.com','mercedesjimenez',0)";
+         tx.executeSql(sql);
+
+         sql = "INSERT INTO localDB(nombre,cargo,edad,departamento,responsabilidades,gmail,twitter,ultimos)"+
+               "VALUES('Sergio Gómez', '20', 'Estudiante','Sistemas microinformáticos','Encargado de la parte de sistemas','sergiogomez@gmail.com','sergiogomez',0)";
+         tx.executeSql(sql);
+
+         //Paso 3 inserta valor a tres ultimos registros teniendo valor 1
+         sql = "UPDATE localDB SET ultimos = 1 WHERE id IN (SELECT id FROM localDB ORDER BY id DESC LIMIT 3)";
+         tx.executeSql(sql);
 
      },
      createDBError:function(err){
