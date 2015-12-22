@@ -30,7 +30,7 @@
          this.db.transaction(this.mostrarDB,this.mostrarDBError);
      },
      mostrarDB:function(tx){
-         var sql="SELECT * FROM localDB;";
+         var sql="SELECT * FROM localDB ORDER BY ultimos DESC;"; //Paso 4 ordenar
          console.log("Lanzamos la consulta");
          tx.executeSql(
              sql,
@@ -42,7 +42,7 @@
                      for(var i=0;i<result.rows.length;i++){
                          var fila=result.rows.item(i);
                          console.log("ROW"+i+"nombre: "+fila.nombre);
-                         $("#lista ul").append("<li id='"+fila.id+"' class='listausers'><a href='detalles.html' data-ajax = 'false'><div class='nombreLista'>"+fila.nombre+"</div><div class='profesion'>"+fila.cargo+"</div></li>").listview('refresh');
+                         $("#lista ul").append("<li id='"+fila.id+"' class='listausers'><a href='detalles.html' data-ajax = 'false'><div class='nombreLista'>"+fila.nombre+"</div><div class='profesion'>"+fila.ultimos+"</div></li>").listview('refresh');
                         console.log("No da error");
                       }
                  }
@@ -112,14 +112,14 @@
 
          //Paso 3 insert valores
          sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
-               "VALUES('Manuel López', '28', 'Estudiante','Educación infantil','Encargado de departamento','manuellopez@gmail.com','manuellopez',0)";
+               "VALUES('Pepe García', '26', 'Profesor','Desarrollo de aplicaciones','Encargado de la parte de programación','pepegarcia@gmail.com','pepegarcia',0)";
          tx.executeSql(sql);
 
          sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
                "VALUES('Mercedes Jiménez', '40', 'Directora','Administración','Encargada de la parte administrativa','mercedesjimenez@gmail.com','mercedesjimenez',0)";
          tx.executeSql(sql);
 
-         sql = "INSERT INTO localDB(nombre,cargo,edad,departamento,responsabilidades,gmail,twitter,ultimos)"+
+         sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
                "VALUES('Sergio Gómez', '20', 'Estudiante','Sistemas microinformáticos','Encargado de la parte de sistemas','sergiogomez@gmail.com','sergiogomez',0)";
          tx.executeSql(sql);
 
