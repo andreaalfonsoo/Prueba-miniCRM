@@ -9,7 +9,9 @@ var twitter="";
 var ultimos="";
 var db="";
 
-var cargarDB = {
+//Paso 5 detalles
+
+var detalle = {
     initialize: function(){
         //generamos el conector
         db = window.openDatabase("localDB","1.0","Base de datos mini CRM",2*1024*1024);
@@ -51,6 +53,8 @@ var cargarDB = {
                         $("#twitter").append(twitter);
                         $("#ultimos").append(ultimos);
 
+                        //Paso 5 compruebo en el monitor que funciona
+                        console.log("caracteristico");
                      }
                 }
 
@@ -65,4 +69,4 @@ var cargarDB = {
         console.log("MENSAGE DE ERROR: "+err.message);
     }
 };
-cargarDB.initialize();
+detalle.initialize();
