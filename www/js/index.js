@@ -101,13 +101,15 @@
              "departamento VARCHAR(256),"+
              "responsabilidades VARCHAR(256),"+
              "gmail VARCHAR(300),"+
-             "twitter VARCHAR(50));";
+             "twitter VARCHAR(50)," +
+             "ultimos INTEGER(1) CHECK (ultimos >=  0 and ultimos <=1));"; //Paso 2 insertar campo ultimos
          tx.executeSql(sql);
 
          //Insertamos valores
          sql = "INSERT INTO localDB(nombre,edad,cargo,departamento,responsabilidades,gmail,twitter,ultimos)"+
                "VALUES('Andrea Alfonso', '23', 'Profesora','Informatica','Encargada de departamento','andreaalfonsoo@gmail.com','andreaalfonsoo',0)";
          tx.executeSql(sql);
+
 
      },
      createDBError:function(err){
