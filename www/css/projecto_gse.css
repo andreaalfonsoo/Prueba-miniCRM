@@ -1,0 +1,99 @@
+/* Mis definiciones de estilo*/
+
+.formularios{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+/* Imagen */
+.imagenLista{
+	margin-left: 5%;
+	position: absolute;
+	float: left;
+}
+
+/* Nombre persona */
+.nombreLista{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+	margin-left: 30%;
+	margin-top: 2%;
+}
+
+/* Profesion persona */
+.profesion{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+	margin-left: 30%;
+}
+
+/* Pobacion */
+.nombrePoblacion{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+	margin-left: 30%;
+}
+
+/* Edad */
+.numeroEdad{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+	margin-left: 30%;
+}
+
+/* Titulo Uso */
+.tituloUso{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+	margin-top: 9%
+}
+
+/* Uso */
+.uso{
+	font-size: 12px;
+	margin-top: 2px;
+	color: grey;
+}
+
+/* Titulo Correo */
+.tituloCorreo{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+}
+
+/* Correo */
+.correo{
+	font-size: 12px;
+	margin-top: 2px;
+	color: grey;
+}
+
+/* Imagen Correo */
+.imagenCorreo{
+
+}
+
+/* Nombre Telefono */
+.numeroTelefono{
+	font-size: 12px;
+	margin-top: 2px;
+	color: black;
+}
+
+/* Telefono */
+.telefono{
+	font-size: 12px;
+	margin-top: 2px;
+	color: grey;
+}
+
+/* Imagen Telefono */
+.imagenTelefono{
+
+}
